@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="717cf0b4-a967-4efe-ab87-31dbcdf337bd" name="Default" comment="aws config file is created. Need to integrate aws file to webapp">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/aws.js" afterPath="$PROJECT_DIR$/app/aws.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes.js" afterPath="$PROJECT_DIR$/app/routes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/passport.js" afterPath="$PROJECT_DIR$/config/passport.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/profile.ejs" afterPath="$PROJECT_DIR$/views/profile.ejs" />
-    </list>
+    <list default="true" id="717cf0b4-a967-4efe-ab87-31dbcdf337bd" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -102,7 +96,7 @@
         <entry file="file://$PROJECT_DIR$/app/routes.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="185">
-              <caret line="34" column="20" lean-forward="false" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
+              <caret line="34" column="18" lean-forward="false" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
               <folding>
                 <element signature="e#0#43#0" expanded="false" />
               </folding>
@@ -435,7 +429,7 @@
       <updated>1486857952515</updated>
       <workItem from="1486857953843" duration="5181000" />
       <workItem from="1486954333451" duration="25104000" />
-      <workItem from="1487730936969" duration="11385000" />
+      <workItem from="1487730936969" duration="11482000" />
     </task>
     <task id="LOCAL-00001" summary="Added more attributes to the user table. Reorganized the data.">
       <created>1486971588673</created>
@@ -458,11 +452,18 @@
       <option name="project" value="LOCAL" />
       <updated>1487033515477</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="completed module.exports for aws.js. Bucket creation method is succesfully implemented.">
+      <created>1487742803257</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1487742803257</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41670000" />
+    <option name="totallyTimeSpent" value="41767000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -516,7 +517,8 @@
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
     <MESSAGE value="Added more attributes to the user table. Reorganized the data." />
     <MESSAGE value="aws config file is created. Need to integrate aws file to webapp" />
-    <option name="LAST_COMMIT_MESSAGE" value="aws config file is created. Need to integrate aws file to webapp" />
+    <MESSAGE value="completed module.exports for aws.js. Bucket creation method is succesfully implemented." />
+    <option name="LAST_COMMIT_MESSAGE" value="completed module.exports for aws.js. Bucket creation method is succesfully implemented." />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -865,7 +867,7 @@
     <entry file="file://$PROJECT_DIR$/app/routes.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="185">
-          <caret line="34" column="20" lean-forward="false" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
+          <caret line="34" column="18" lean-forward="false" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
           <folding>
             <element signature="e#0#43#0" expanded="false" />
           </folding>
