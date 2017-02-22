@@ -1,6 +1,8 @@
 /**
  * Created by Revanth on 2/11/2017.
  */
+
+var userprofile = require('./profile.js');
 module.exports = function (app, passport) {
 
     app.get('/', function (req, res) {
@@ -27,6 +29,16 @@ module.exports = function (app, passport) {
             user: req.user // get the user out of session and pass to template
         });
     });
+
+    // Post the information about the bucket name to the system
+    app.post('/profile', function (req, res, err) {
+        if (err) {
+            console.log("error")
+        }
+
+
+    });
+
     app.get('/logout', function (req, res) {
         req.logout();
         res.redirect('/');
@@ -56,6 +68,5 @@ module.exports = function (app, passport) {
         failureRedirect : '/login', // redirect back to the signup page if there is an error
         failureFlash : true // allow flash messages
     }));
-
 };
 

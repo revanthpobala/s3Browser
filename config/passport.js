@@ -66,7 +66,6 @@ module.exports = function (passport) {
                         newUser.local.lastName = req.body.lastname;
                         newUser.local.authorizationLevel = false;
                         newUser.local.timeStamp = currentTime.getTime();
-                        console.log(newUser);
                         newUser.save(function (err) {
                             if (err)
                                 throw err;
@@ -105,7 +104,6 @@ module.exports = function (passport) {
                 // if the user is found but the password is wrong
                 if (!user.validPassword(password))
                     return done(null, false, req.flash('loginMessage', 'Oops! Wrong password.')); // create the loginMessage and save it to session as flashdata
-                console.log(user);
                 // all is well, return successful user
                 return done(null, user);
             });

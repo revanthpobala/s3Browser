@@ -2,23 +2,34 @@
  * Created by Revanth on 2/13/2017.
  */
 
+//TODO Methods for deleting files.
+
 var aws = require('aws-sdk');
 var fs = require('fs');
-aws.config.loadFromPath('./config/awsConfig.json');
-s3 = new aws().S3;
+aws.config.loadFromPath('../Passport/config/awsConfig.json');
+s3 = new aws.S3();
 
-var bucketName = 'test-bucket';
-
+/**
+ * Method to create the bucket in s3
+ *
+ * @param bucketName
+ */
 function createBucket(bucketName) {
     s3.createBucket({Bucket: bucketName}, function () {
         console.log("Bucket created successfully")
     })
 }
 
-function uploadFile(remoteFilename, fileName) {
+/**
+ * Upload file method to upload the file(s) to the bucket.
+ *
+ * @param remoteFilename
+ * @param fileName
+ * @param bucketName
+ */
+function uploadFile(remoteFilename, fileName, bucketName) {
     var fileBuffer = fs.readFileSync(fileName);
     var metaData = getContentTypeByFile(fileName);
-
     s3.putObject({
         ACL: 'public-read',
         Bucket: bucketName,
@@ -30,6 +41,12 @@ function uploadFile(remoteFilename, fileName) {
     });
 }
 
+/**
+ * Helper method to get the file list
+ *
+ * @param path
+ * @returns {Array}
+ */
 function getFileList(path) {
     var i, fileInfo, filesFound;
     var fileList = [];
@@ -41,10 +58,15 @@ function getFileList(path) {
     return fileList;
 }
 
+/**
+ * Helper method to get the content type of the file.
+ *
+ * @param fileName
+ * @returns {string}
+ */
 function getContentTypeByFile(fileName) {
     var rc = 'application/octet-stream';
     var fn = fileName.toLowerCase();
-
     if (fn.indexOf('.html') >= 0) rc = 'text/html';
     else if (fn.indexOf('.css') >= 0) rc = 'text/css';
     else if (fn.indexOf('.json') >= 0) rc = 'application/json';
@@ -53,3 +75,7 @@ function getContentTypeByFile(fileName) {
     else if (fn.indexOf('.jpg') >= 0) rc = 'image/jpg';
     return rc;
 }
+
+module.exports.createBucket = createBucket;
+module.exports.uploadFile = uploadFile;
+module.exports.getFileList = getFileList;
